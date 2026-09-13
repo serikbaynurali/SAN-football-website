@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAN Football Hub - Join Club</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="nav-container">
+      <div class="nav-brand">SAN Football Hub</div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Team</a></li>
+          <li><a href="players.html">Top Players</a></li>
+          <li><a href="schedule.html">Matches & Table</a></li>
+          <li><a href="tactics.html">Tactics</a></li>
+          <li><a href="contact.html">Join Club</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 style="text-align: center; margin-bottom: 20px;">SAN Fan Club Registration Form</h2>
+
+    <form id="contact-form" action="#" method="post">
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="e.g., Serikbay Nurali" required>
+      <div>
+
+      <div class="form-group">
+        <label for="emailAddr">Email Address:</label>
+        <input type="email" id="emailAddr" name="emailAddr" placeholder="nurali@example.com" required>
+      <div>
+
+      <div class="form-group">
+        <label for="favLeague">Favorite Competition / League:</label>
+        <select id="favLeague" name="favLeague">
+          <option value="ucl">UEFA Champions League</option>
+          <option value="epl">English Premier League</option>
+          <option value="laliga">Spanish La Liga</option>
+          <option value="seriea">Italian Serie A</option>
+        </select>
+      <div>
+
+      <div class="form-group">
+        <label>Membership Tier:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="tier" value="standard" checked> Standard Fan</label>
+          <label><input type="radio" name="tier" value="vip"> VIP Member</label>
+        </div>
+      <div>
+
+      <div class="form-group">
+        <label for="themeColor">Favorite Club Theme Color:</label>
+        <input type="color" id="themeColor" name="themeColor" value="#1b4332">
+      <div>
+
+      <div class="form-group">
+        <label for="messageText">Feedback / Preferred Football Club:</label>
+        <textarea id="messageText" name="messageText" rows="5" placeholder="Share your favorite team and tactical thoughts..." required></textarea>
+      <div>
+
+      <button type="submit" class="btn-submit">Register Fan Membership</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Created by: Sardar Amangeldin, Serikbay Nurali, Abilda Arman | Group: SAN</p>
+  </footer>
+
+</body>
+</html>
