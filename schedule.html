@@ -4,70 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SAN Football Hub - Schedule</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
-  <!-- Task 1: Flexbox Navigation -->
-  <header id="main-header">
-    <div class="nav-container">
-      <div class="nav-brand">⚽ SAN Football Hub</div>
-      <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="players.html">Players</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
-        <li><a href="tactics.html">Tactics</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container-fluid px-sm-2 px-md-4">
+      <a class="navbar-brand fw-bold text-success" href="index.html">⚽ SAN Football Hub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="players.html">Players</a></li>
+          <li class="nav-item"><a class="nav-link active" href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="tactics.html">Tactics</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- Task 3: Grid Layout Container -->
-  <div class="page-layout-grid">
-    <aside class="sidebar">
-      <h3>Matchday Info</h3>
-      <p>All times are listed in local Astana Time (UTC+5).</p>
-    </aside>
+  <div class="container my-4 my-lg-5 flex-grow-1">
+    <div class="row g-4">
+      <aside class="col-12 col-lg-4">
+        <div class="p-4 bg-light border rounded shadow-sm">
+          <h3 class="h4 text-success mb-3">Matchday Info</h3>
+          <p class="mb-0">All times are listed in local Astana Time (UTC+5).</p>
+        </div>
+      </aside>
 
-    <main class="main-content">
-      <h1>Upcoming Match Schedule</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Matchup</th>
-            <th>Competition</th>
-            <th>Venue</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Oct 15, 2026</td>
-            <td>Real Madrid vs Barcelona</td>
-            <td>La Liga</td>
-            <td>Santiago Bernabéu</td>
-          </tr>
-          <tr>
-            <td>Oct 22, 2026</td>
-            <td>Manchester City vs Bayern Munich</td>
-            <td>Champions League</td>
-            <td>Etihad Stadium</td>
-          </tr>
-          <tr>
-            <td>Nov 05, 2026</td>
-            <td>PSG vs Juventus</td>
-            <td>Champions League</td>
-            <td>Parc des Princes</td>
-          </tr>
-        </tbody>
-      </table>
-    </main>
+      <main class="col-12 col-lg-8">
+        <h1 class="h2 mb-4 text-success">Upcoming Match Schedule</h1>
+        <div class="table-responsive shadow-sm rounded">
+          <table class="table table-striped table-hover align-middle mb-0">
+            <thead class="table-dark">
+              <tr>
+                <th>Date</th>
+                <th>Matchup</th>
+                <th>Competition</th>
+                <th>Venue</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Oct 15, 2026</td>
+                <td class="fw-semibold">Real Madrid vs Barcelona</td>
+                <td><span class="badge bg-warning text-dark">La Liga</span></td>
+                <td>Santiago Bernabéu</td>
+              </tr>
+              <tr>
+                <td>Oct 22, 2026</td>
+                <td class="fw-semibold">Man City vs Bayern Munich</td>
+                <td><span class="badge bg-primary">Champions League</span></td>
+                <td>Etihad Stadium</td>
+              </tr>
+              <tr>
+                <td>Nov 05, 2026</td>
+                <td class="fw-semibold">PSG vs Juventus</td>
+                <td><span class="badge bg-primary">Champions League</span></td>
+                <td>Parc des Princes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
   </div>
 
-  <footer id="main-footer">
-    <p>&copy; 2026 Group SAN (SE-2511). All rights reserved.</p>
+  <footer class="py-3 mt-auto text-center border-top">
+    <div class="container">
+      <p class="mb-1">&copy; 2026 Group SAN (SE-2511). All rights reserved.</p>
+      <small class="text-light-50">Team Members: Serikbay Nurali, Abilda Arman, Sardar Amangeldin</small>
+    </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
