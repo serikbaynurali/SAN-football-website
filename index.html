@@ -7,16 +7,27 @@
   <!-- Bootstrap 5 CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  
 </head>
 <body class="d-flex flex-column min-vh-100">
-
-  <!-- Task 5 & Task 10: Bootstrap Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
-    <div class="container-fluid px-sm-2 px-md-4">
-      <a class="navbar-brand fw-bold text-success" href="index.html">⚽ SAN Football Hub</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <div class="container-fluid px-sm-2 px-md-4">
+    <a class="navbar-brand fw-bold text-success" href="index.html">⚽ SAN Football Hub</a>
+    
+    <!-- Live Clock & Theme Toggle -->
+    <div class="d-flex align-items-center ms-auto me-3 text-white">
+      <span id="live-clock" class="me-2 text-warning"></span>
+      <button id="bg-toggle-btn" class="btn btn-outline-light btn-sm" title="Change Background">🎨</button>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+  
+  
+      
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
@@ -38,7 +49,7 @@
       <aside class="col-12 col-lg-4">
         <div class="p-4 bg-light border rounded shadow-sm">
           <h3 class="h4 text-success mb-3">Quick Navigation</h3>
-          <p>Welcome to the ultimate platform for world football news and tactical insights.</p>
+          <p id="text">Welcome to the ultimate platform for world football news and tactical insights.</p>
           <hr class="my-3">
           <h4 class="h5">Latest Updates</h4>
           <ul class="list-unstyled mb-0">
@@ -91,7 +102,7 @@
           </div>
         </section>
 
-        <!-- Task 6 & Task 8: Bootstrap Cards & Buttons Group -->
+        
         <h2 class="h3 mb-3">Featured News</h2>
         <div class="row row-cols-1 row-cols-md-3 g-3 mb-4">
           <div class="col">
@@ -101,7 +112,7 @@
                 <p class="card-text flex-grow-1">An in-depth look into the upcoming derby with expected lineups and setups.</p>
                 <!-- Task 6: Button Group -->
                 <div class="btn-group mt-3" role="group">
-                  <a href="#" class="btn btn-outline-success btn-sm">Read</a>
+                  <a href="schedule.html" class="btn btn-outline-success btn-sm">Read</a>
                   <a href="#" class="btn btn-outline-secondary btn-sm">Share</a>
                 </div>
               </div>
@@ -113,7 +124,7 @@
                 <h5 class="card-title">Tactical Spotlight</h5>
                 <p class="card-text flex-grow-1">Analyzing high-pressing schemes and building out from the back.</p>
                 <div class="btn-group mt-3" role="group">
-                  <a href="#" class="btn btn-outline-success btn-sm">Read</a>
+                  <a href="tactics.html" class="btn btn-outline-success btn-sm">Read</a>
                   <a href="#" class="btn btn-outline-secondary btn-sm">Share</a>
                 </div>
               </div>
@@ -125,7 +136,7 @@
                 <h5 class="card-title">Player Analysis</h5>
                 <p class="card-text flex-grow-1">Individual performance metrics highlighting key playmakers.</p>
                 <div class="btn-group mt-3" role="group">
-                  <a href="#" class="btn btn-outline-success btn-sm">Read</a>
+                  <a href="players.html" class="btn btn-outline-success btn-sm">Read</a>
                   <a href="#" class="btn btn-outline-secondary btn-sm">Share</a>
                 </div>
               </div>
@@ -136,7 +147,7 @@
     </div>
   </div>
 
-  <!-- Rules Requirement: Names in Footer -->
+  
   <footer class="py-3 mt-auto text-center border-top">
     <div class="container">
       <p class="mb-1">&copy; 2026 Group SAN (SE-2511). All rights reserved.</p>
@@ -144,7 +155,8 @@
     </div>
   </footer>
 
-  <!-- Bootstrap 5 JS Bundle CDN -->
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js">  </script>
 </body>
 </html>
