@@ -1,4 +1,4 @@
-//* =========================================================
+/* =========================================================
    ASSIGNMENT 3: MEDIA QUERIES & BOOTSTRAP OVERRIDES
    ========================================================= */
 
@@ -115,10 +115,8 @@ footer {
   background-color: #1b4332;
   color: #ffffff;
 }
-.custom-card{
-  display:flex;
-  wrap:wrap
-}
+
+
 /* =====================================================================
    ASSIGNMENT 5 — additions
    WHERE TO PUT IT: paste at the very END of css/style.css
