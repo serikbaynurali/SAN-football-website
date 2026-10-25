@@ -119,3 +119,152 @@ footer {
   display:flex;
   wrap:wrap
 }
+/* =====================================================================
+   ASSIGNMENT 5 — additions
+   WHERE TO PUT IT: paste at the very END of css/style.css
+   ===================================================================== */
+
+/* ---------- smooth theme change ---------- */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ---------- Day / Night theme (class toggled by JS) ---------- */
+body.night-mode {
+  background-color: #0f1418 !important;
+  color: #e8eaed !important;
+}
+body.night-mode .bg-light,
+body.night-mode .bg-white {
+  background-color: #1b232b !important;
+  color: #e8eaed !important;
+  border-color: #2b3640 !important;
+}
+body.night-mode .text-muted {
+  color: #9aa5b1 !important;
+}
+body.night-mode footer {
+  color: #cfd6dd;
+}
+
+/* ---------- classes that replace inline styles ---------- */
+.carousel-img {
+  height: 350px;
+  object-fit: cover;
+}
+.team-photo {
+  height: 180px;
+  object-fit: cover;
+}
+.player-avatar {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.player-avatar-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #198754, #0d6efd);
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* ---------- star rating ---------- */
+.star-rating {
+  display: inline-flex;
+  gap: 4px;
+  margin-bottom: 0.4rem;
+}
+.star {
+  font-size: 1.7rem;
+  line-height: 1;
+  color: #c5c9cd;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.star.selected,
+.star.hovered {
+  color: #ffc107;
+}
+.star:focus-visible {
+  outline: 2px solid #198754;
+  border-radius: 4px;
+}
+
+/* ---------- cards ---------- */
+.player-card,
+.news-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.player-card:hover,
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ---------- keyboard focus in the navbar ---------- */
+.navbar .nav-link:focus-visible {
+  outline: 2px solid #ffc107;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- goal counter ---------- */
+.goal-pitch {
+  background: #198754;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+.goal-ball {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+/* ---------- animations (triggered by JS adding a class) ---------- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up {
+  animation: fadeInUp 0.5s ease both;
+}
+
+@keyframes starPop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.7) rotate(15deg); }
+  100% { transform: scale(1); }
+}
+.star-pop {
+  animation: starPop 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+.shake {
+  animation: shake 0.45s ease;
+}
+
+@keyframes ballKick {
+  0%   { transform: translateX(0) translateY(0) rotate(0deg); }
+  35%  { transform: translateX(60px) translateY(-45px) rotate(200deg); }
+  70%  { transform: translateX(-60px) translateY(0) rotate(400deg); }
+  100% { transform: translateX(0) translateY(0) rotate(720deg); }
+}
+.ball-kick {
+  animation: ballKick 0.8s ease;
+}
+
+/* respect users who turn animations off */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up, .star-pop, .shake, .ball-kick {
+    animation: none;
+  }
+}

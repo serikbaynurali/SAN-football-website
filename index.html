@@ -57,6 +57,12 @@
             <li class="py-1">⚽ Top Scorers Leaderboard</li>
             <li class="py-1">⚽ Transfer Rumors 2026</li>
           </ul>
+          <hr class="my-3">
+          <h4 class="h5">Fan Corner</h4>
+          <p id="greeting" class="mb-2"></p>
+          <div class="goal-pitch text-center my-2"><span id="goal-ball" class="goal-ball">⚽</span></div>
+          <button id="goal-btn" class="btn btn-success w-100" type="button">⚽ Score a goal!</button>
+          <p class="mt-2 mb-0">Goals: <strong id="goal-count">0</strong> — <span id="goal-message">Press the button!</span></p>
         </div>
       </aside>
 
@@ -83,15 +89,15 @@
               <button type="button" data-bs-target="#footballCarousel" data-bs-slide-to="8"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active"><img src="img/camp now.jpg" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="Camp Nou"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Camp Nou Atmosphere</h5></div></div>
-              <div class="carousel-item"><img src="img/santiago bernabeu.jpg" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="Santiago Bernabeu"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Santiago Bernabéu Matchday</h5></div></div>
-              <div class="carousel-item"><img src="img/old trafford.jpg" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="Old Trafford"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Old Trafford Lights</h5></div></div>
-              <div class="carousel-item"><img src="img/tactical warm.jpg" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="Tactics"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Tactical Warmup</h5></div></div>
-              <div class="carousel-item"><img src="img/cl.jpg" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="Trophy"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Champions League Trophy</h5></div></div>
-              <div class="carousel-item"><img src="img/team goal.jpg " class="d-block w-100" style="height: 350px; object-fit: cover;" alt="Match 1"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Team Goal Celebration</h5></div></div>
-              <div class="carousel-item"><img src="img/training.jpg" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="Training"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Training Session</h5></div></div>
-              <div class="carousel-item"><img src="img/fan zone.jpg" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="Fan Zone"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Fan Zone Culture</h5></div></div>
-              <div class="carousel-item"><img src="img/press conference.jpg" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="Press"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Post-Match Analysis</h5></div></div>
+              <div class="carousel-item active"><img src="img/camp now.jpg" class="d-block w-100 carousel-img"  alt="Camp Nou"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Camp Nou Atmosphere</h5></div></div>
+              <div class="carousel-item"><img src="img/santiago bernabeu.jpg" class="d-block w-100 carousel-img"  alt="Santiago Bernabeu"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Santiago Bernabéu Matchday</h5></div></div>
+              <div class="carousel-item"><img src="img/old trafford.jpg" class="d-block w-100 carousel-img" alt="Old Trafford"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Old Trafford Lights</h5></div></div>
+              <div class="carousel-item"><img src="img/tactical warm.jpg" class="d-block w-100 carousel-img" alt="Tactics"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Tactical Warmup</h5></div></div>
+              <div class="carousel-item"><img src="img/cl.jpg" class="d-block w-100 carousel-img" alt="Trophy"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Champions League Trophy</h5></div></div>
+              <div class="carousel-item"><img src="img/team goal.jpg " class="d-block w-100 carousel-img" alt="Match 1"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Team Goal Celebration</h5></div></div>
+              <div class="carousel-item"><img src="img/training.jpg" class="d-block w-100 carousel-img" alt="Training"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Training Session</h5></div></div>
+              <div class="carousel-item"><img src="img/fan zone.jpg" class="d-block w-100 carousel-img" alt="Fan Zone"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Fan Zone Culture</h5></div></div>
+              <div class="carousel-item"><img src="img/press conference.jpg" class="d-block w-100 carousel-img" alt="Press"><div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50"><h5>Post-Match Analysis</h5></div></div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#footballCarousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon"></span>
@@ -143,6 +149,9 @@
             </div>
           </div>
         </div>
+        <div id="news-container" class="row row-cols-1 row-cols-md-3 g-3 mb-3"></div>
+        <button id="load-more-btn" class="btn btn-success" type="button">Load more news</button>
+        <p id="load-status" class="small text-muted mt-2"></p>
       </main>
     </div>
   </div>
